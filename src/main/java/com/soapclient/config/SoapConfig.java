@@ -21,7 +21,7 @@ public class SoapConfig {
 
     @Bean
     public Proxy weatherClient(Jaxb2Marshaller marshaller) {    	
-        client.setDefaultUri("http://wsf.cdyne.com/WeatherWS");
+        client.setDefaultUri("http://wsf.cdyne.com/WeatherWS/Weather.asmx");
         client.setMarshaller(marshaller);
         client.setUnmarshaller(marshaller);
         return client;

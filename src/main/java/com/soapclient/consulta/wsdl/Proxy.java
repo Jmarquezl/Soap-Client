@@ -13,7 +13,7 @@ public class Proxy extends WebServiceGatewaySupport{
 	public GetCityWeatherByZIPResponse obtenerClimaPorCP(GetCityWeatherByZIP request) {
 		log.info("Inicio del llamado del servicio SOAP ********************");
 		return (GetCityWeatherByZIPResponse)getWebServiceTemplate().marshalSendAndReceive(
-				"http://wsf.cdyne.com/WeatherWS/Weather.asmx",
+				this.getDefaultUri(),
 				request,
 				new SoapActionCallback("http://ws.cdyne.com/WeatherWS/GetCityWeatherByZIP"));
 	}
